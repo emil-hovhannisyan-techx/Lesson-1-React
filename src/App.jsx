@@ -1,5 +1,6 @@
 import "./App.css";
 import ProfileCard from "./components/ProfileCard";
+import FunnyButton from "./components/FunnyButton";
 
 function App() {
   const ringFellowship = [
@@ -34,16 +35,19 @@ function App() {
   ];
 
   return (
-    <div className="container">
-      {ringFellowship.map((member) => (
-        <ProfileCard
-          key={member.id}
-          name={member.name}
-          title={member.title}
-          imageUrl={member.imageUrl}
-        />
-      ))}
-    </div>
+    <>
+      <div className="container">
+        {ringFellowship.map((member) => (
+          <ProfileCard
+            key={member.id}
+            name={member.name}
+            title={member.title}
+            imageUrl={member.imageUrl}
+          />
+        ))}
+      </div>
+      <FunnyButton />
+    </>
   );
 }
 
